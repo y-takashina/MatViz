@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{39583E0B-A8B3-49D2-B4D5-E1A060E297E4}</ProjectGuid>
+    <ProjectGuid>{31636F5F-347B-4DDC-8309-CCC4CAD068E0}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MatrixVisualization</RootNamespace>
