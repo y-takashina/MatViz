@@ -14,7 +14,7 @@ namespace MatrixVisualizer
         {
             var m = matrix.GetLength(0);
             var n = matrix.GetLength(1);
-            var cellSize = m < n ? 400/n : 400/m;
+            var cellSize = m < n ? 1280/n : 1280/m;
             var bmp = new Bitmap(m*cellSize, n*cellSize);
             var graphics = Graphics.FromImage(bmp);
 
