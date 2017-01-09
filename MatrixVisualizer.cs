@@ -10,7 +10,7 @@ namespace MatrixVisualizer
 {
     public static class MatrixVisualizer
     {
-        public static Bitmap DrawMatrixImage(double[,] matrix, string name, double threshold = double.MaxValue)
+        public static Bitmap DrawMatrixImage(double[,] matrix, double threshold = double.MaxValue)
         {
             var m = matrix.GetLength(0);
             var n = matrix.GetLength(1);
@@ -44,7 +44,7 @@ namespace MatrixVisualizer
 
         public static void SaveMatrixImage(double[,] matrix, string name, double threshold = double.MaxValue)
         {
-            var bmp = DrawMatrixImage(matrix, name, threshold);
+            var bmp = DrawMatrixImage(matrix, threshold);
             bmp.Save(name + ".png", ImageFormat.Png);
         }
     }
