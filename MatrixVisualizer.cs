@@ -10,7 +10,7 @@ namespace MatrixVisualizer
 {
     public static class MatrixVisualizer
     {
-        public static Bitmap DisplayMatrix(double[,] matrix, string name, double threshold = double.MaxValue)
+        public static Bitmap DrawMatrixImage(double[,] matrix, string name, double threshold = double.MaxValue)
         {
             var m = matrix.GetLength(0);
             var n = matrix.GetLength(1);
@@ -39,8 +39,13 @@ namespace MatrixVisualizer
                     graphics.FillRectangle(brushes[(int) (value/unit)], i*cellSize, j*cellSize, cellSize, cellSize);
                 }
             }
-            bmp.Save(name + ".png", ImageFormat.Png);
             return bmp;
+        }
+
+        public static void SaveMatrixImage(double[,] matrix, string name, double threshold = double.MaxValue)
+        {
+            var bmp = DrawMatrixImage(matrix, name, threshold);
+            bmp.Save(name + ".png", ImageFormat.Png);
         }
     }
 }
