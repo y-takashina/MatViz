@@ -15,19 +15,19 @@ namespace MatrixVisualization
         public Form1()
         {
             InitializeComponent();
-            DisplayMatrix(new[,] {{1, 0, 1, 0, 0}, {0, 1, 1, 0, 0}});
+            //DisplayMatrix(new[,] {{1, 0, 1, 0, 0}, {0, 1, 1, 0, 0}});
+            //DisplayMatrix(new[,] {{100, 0, 100, 50, 0}, {0, 30, 10, 0, 13}});
         }
 
         public void DisplayMatrix(int[,] matrix, int threshold = int.MaxValue)
         {
             var m = matrix.GetLength(0);
             var n = matrix.GetLength(1);
-            var cellSize = 50;
+            var cellSize = m < n ? 400/n : 400/m;
             var bmp = new Bitmap(m*cellSize, n*cellSize);
             var graphics = Graphics.FromImage(bmp);
 
-            var c = new[] {255, 219, 182, 146, 109, 73, 36, 0};
-            var brushes = Enumerable.Range(0, 8).Select(i => new SolidBrush(Color.FromArgb(255, c[i], c[i], c[i]))).ToList();
+            var brushes = Enumerable.Range(0, 256).Reverse().Select(i => new SolidBrush(Color.FromArgb(255, i, i, i))).ToList();
             var max = int.MinValue;
             for (var i = 0; i < m; i++)
             {
@@ -37,7 +37,7 @@ namespace MatrixVisualization
                 }
             }
             max = max > threshold ? threshold : max;
-            var unit = max/8.0;
+            var unit = max/255.0;
 
             graphics.Clear(Color.White);
             for (var i = 0; i < m; i++)
@@ -45,7 +45,7 @@ namespace MatrixVisualization
                 for (var j = 0; j < n; j++)
                 {
                     var value = matrix[i, j] > threshold ? threshold : matrix[i, j];
-                    graphics.FillRectangle(brushes[value/(int) Math.Ceiling(unit)], i*cellSize, j*cellSize, cellSize, cellSize);
+                    graphics.FillRectangle(brushes[(int) (value/unit)], i*cellSize, j*cellSize, cellSize, cellSize);
                 }
             }
 
