@@ -1,4 +1,4 @@
-﻿namespace MatrixVisualization
+﻿namespace MatrixVisualizer
 {
     partial class Form1
     {
