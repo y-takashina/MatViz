@@ -14,9 +14,7 @@ namespace MatrixVisualizer
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            MatrixVisualizer.SaveMatrixImage(new[,] {{0.0, 0, 1, 0, 1}, {1, 0, 1, 0, 0}}, "test", 1);
         }
     }
 }
