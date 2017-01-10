@@ -10,7 +10,7 @@ namespace MatrixVisualizer
 {
     public static class MatrixVisualizer
     {
-        public static Bitmap CreateMatrixImage(double[,] matrix, double threshold = double.MaxValue)
+        public static Bitmap CreateMatrixImage(double[,] matrix, double threshold = double.MaxValue, bool bgWhite = true)
         {
             var m = matrix.GetLength(0);
             var n = matrix.GetLength(1);
@@ -18,7 +18,8 @@ namespace MatrixVisualizer
             var bmp = new Bitmap(m*cellSize, n*cellSize);
             var graphics = Graphics.FromImage(bmp);
 
-            var brushes = Enumerable.Range(0, 256).Reverse().Select(i => new SolidBrush(Color.FromArgb(255, i, i, i))).ToList();
+            var brushes = Enumerable.Range(0, 256).Select(i => new SolidBrush(Color.FromArgb(255, i, i, i))).ToList();
+            if (bgWhite) brushes.Reverse();
             var max = double.MinValue;
             for (var i = 0; i < m; i++)
             {
@@ -30,7 +31,7 @@ namespace MatrixVisualizer
             max = max > threshold ? threshold : max;
             var unit = max/255.0;
 
-            graphics.Clear(Color.White);
+            graphics.Clear(bgWhite ? Color.White : Color.Black);
             for (var i = 0; i < m; i++)
             {
                 for (var j = 0; j < n; j++)
@@ -42,9 +43,9 @@ namespace MatrixVisualizer
             return bmp;
         }
 
-        public static void SaveMatrixImage(double[,] matrix, string name, double threshold = double.MaxValue)
+        public static void SaveMatrixImage(double[,] matrix, string name, double threshold = double.MaxValue, bool bgWhite = true)
         {
-            var bmp = CreateMatrixImage(matrix, threshold);
+            var bmp = CreateMatrixImage(matrix, threshold, bgWhite);
             bmp.Save(name + ".png", ImageFormat.Png);
         }
     }
