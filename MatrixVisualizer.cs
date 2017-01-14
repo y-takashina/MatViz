@@ -19,15 +19,19 @@ namespace MatrixVisualizer
             var graphics = Graphics.FromImage(bmp);
 
             var brushes = Enumerable.Range(0, 256).Select(i => new SolidBrush(Color.FromArgb(255, i, i, i))).ToList();
+            var minusBrushes = Enumerable.Range(0, 256).Select(i => new SolidBrush(Color.FromArgb(255, bgWhite ? 255 : i, bgWhite ? 255 - i : 0, bgWhite ? 255 - i : 0))).ToList();
             if (bgWhite) brushes.Reverse();
             var max = double.MinValue;
+            var min = double.MaxValue;
             for (var i = 0; i < m; i++)
             {
                 for (var j = 0; j < n; j++)
                 {
                     if (matrix[i, j] > max) max = matrix[i, j];
+                    if (matrix[i, j] < min) min = matrix[i, j];
                 }
             }
+            max = max > -min ? max : -min;
             max = max > threshold ? threshold : max;
             var unit = max/255.0;
 
@@ -37,7 +41,8 @@ namespace MatrixVisualizer
                 for (var j = 0; j < n; j++)
                 {
                     var value = matrix[i, j] > threshold ? threshold : matrix[i, j];
-                    graphics.FillRectangle(brushes[(int) (value/unit)], i*cellSize, j*cellSize, cellSize, cellSize);
+                    var brush = value >= 0 ? brushes[(int) (value/unit)] : minusBrushes[(int) (-value/unit)];
+                    graphics.FillRectangle(brush, i*cellSize, j*cellSize, cellSize, cellSize);
                 }
             }
             return bmp;
