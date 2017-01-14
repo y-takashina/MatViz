@@ -15,7 +15,7 @@ namespace MatrixVisualizer
             var m = matrix.GetLength(0);
             var n = matrix.GetLength(1);
             var cellSize = m < n ? 1280/n : 1280/m;
-            var bmp = new Bitmap(m*cellSize, n*cellSize);
+            var bmp = new Bitmap(n*cellSize, m*cellSize);
             var graphics = Graphics.FromImage(bmp);
 
             var brushes = Enumerable.Range(0, 256).Select(i => new SolidBrush(Color.FromArgb(255, i, i, i))).ToList();
@@ -42,7 +42,7 @@ namespace MatrixVisualizer
                 {
                     var value = matrix[i, j] > threshold ? threshold : matrix[i, j];
                     var brush = value >= 0 ? brushes[(int) (value/unit)] : minusBrushes[(int) (-value/unit)];
-                    graphics.FillRectangle(brush, i*cellSize, j*cellSize, cellSize, cellSize);
+                    graphics.FillRectangle(brush, j*cellSize, i*cellSize, cellSize, cellSize);
                 }
             }
             return bmp;
