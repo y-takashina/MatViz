@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MatrixVisualizer
+namespace MatViz
 {
-    public static class MatrixVisualizer
+    public static class MatViz
     {
         public static Bitmap CreateMatrixImage(double[,] matrix, double threshold = double.MaxValue, bool bgWhite = true)
         {

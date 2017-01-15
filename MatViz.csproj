@@ -7,8 +7,8 @@
     <ProjectGuid>{31636F5F-347B-4DDC-8309-CCC4CAD068E0}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MatrixVisualizer</RootNamespace>
-    <AssemblyName>MatrixVisualizer</AssemblyName>
+    <RootNamespace>MatViz</RootNamespace>
+    <AssemblyName>MatViz</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MatrixVisualizer.cs" />
+    <Compile Include="MatViz.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
