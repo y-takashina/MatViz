@@ -1,18 +1,18 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MatViz;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace MatViz
+namespace MatViz.Tests
 {
-    static class Program
+    [TestClass()]
+    public class MatVizTests
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
+        [TestMethod()]
+        public void SaveMatrixImageTest()
         {
             MatViz.SaveMatrixImage(new[,] {{0.0, 0.3, 0.5, 0.8, 1}, {0, 0, 0, 0, 0}}, "positive", 1);
             MatViz.SaveMatrixImage(new[,] {{0.0, 0.3, 0.5, 0.8, 1}, {0, 0, 0, 0, 0}}, "positive-flipped", 1, false);
