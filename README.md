@@ -13,7 +13,12 @@ public static void SaveMatrixImage(double[,] matrix, string name, double thresho
 - bgWhite: As default, zero will be drawn white and max value will be black. If set to false, the color will be flipped.
 
 ## How to use
-Add to your solution as a sub project, or simply download the .cs file and modify namespace to your project.
+You can install MatViz via NuGet package manager.<br>
+The NuGet id of this package is `MatViz.dll`, not `MatViz`.
+
+[NuGet page](https://www.nuget.org/packages/MatViz.dll/1.0.1.1)
+
+If you want to edit source code, add this project to your solution as a sub project, or simply download the .cs file and modify namespace to your project.
 
 ## Examples
 | matrix | query|  image |
