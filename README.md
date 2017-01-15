@@ -1,4 +1,4 @@
-# Matrix Visualizer
+# MatViz
 
 Simple C# API for matrix(2d array) visualization.
 
