@@ -16,7 +16,7 @@ public static void SaveMatrixImage(double[,] matrix, string name, double thresho
 You can install MatViz via NuGet package manager.<br>
 The NuGet id of this package is `MatViz.dll`, not `MatViz`.
 
-[NuGet page](https://www.nuget.org/packages/MatViz.dll/1.0.1.1)
+[NuGet page for MatViz](https://www.nuget.org/packages/MatViz.dll/1.0.1.1)
 
 If you want to edit source code, add this project to your solution as a sub project, or simply download the .cs file and modify namespace to your project.
 
