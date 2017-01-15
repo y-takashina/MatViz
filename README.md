@@ -12,6 +12,9 @@ public static void SaveMatrixImage(double[,] matrix, string name, double thresho
 - threshold: Dynamic range for the matrix values
 - bgWhite: As default, zero will be drawn white and max value will be black. If set to false, the color will be flipped.
 
+## How to use
+Add to your solution as a sub project, or simply download the .cs file and modify namespace to your project.
+
 ## Examples
 | matrix | query|  image |
 |---|---|---|
