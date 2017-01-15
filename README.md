@@ -15,8 +15,8 @@ public static void SaveMatrixImage(double[,] matrix, string name, double thresho
 
 | matrix | image |
 |---|---|
-| {{0.0, 0.3, 0.5, 0.8, 1}, {0, 0, 0, 0, 0}} | ![positive](image/positive.png=200x) |
-| {{0.0, 0.3, 0.5, 0.8, 1}, {0, 0, 0, 0, 0}} | ![positive-flipped](image/positive-flipped.png=200x) |
-| {{0.0, 0.3, 0.5, 0.8, 1}, {0.0, -0.3, -0.5, -0.8, -1}} | ![negative](image/negative.png=200x) |
-| {{0.0, 0.3, 0.5, 0.8, 1}, {0.0, -0.3, -0.5, -0.8, -1}} | ![negative-flipped](image/negative-flipped.png=200x) |
+| {{0.0, 0.3, 0.5, 0.8, 1}, {0, 0, 0, 0, 0}} | ![positive](image/positive.png =200x) |
+| {{0.0, 0.3, 0.5, 0.8, 1}, {0, 0, 0, 0, 0}} | ![positive-flipped](image/positive-flipped.png =200x) |
+| {{0.0, 0.3, 0.5, 0.8, 1}, {0.0, -0.3, -0.5, -0.8, -1}} | ![negative](image/negative.png =200x) |
+| {{0.0, 0.3, 0.5, 0.8, 1}, {0.0, -0.3, -0.5, -0.8, -1}} | ![negative-flipped](image/negative-flipped.png =200x) |
 
