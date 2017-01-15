@@ -18,6 +18,8 @@ namespace MatrixVisualizer
             MatrixVisualizer.SaveMatrixImage(new[,] {{0.0, 0.3, 0.5, 0.8, 1}, {0, 0, 0, 0, 0}}, "positive-flipped", 1, false);
             MatrixVisualizer.SaveMatrixImage(new[,] {{0.0, 0.3, 0.5, 0.8, 1}, {0.0, -0.3, -0.5, -0.8, -1}}, "negative", 1);
             MatrixVisualizer.SaveMatrixImage(new[,] {{0.0, 0.3, 0.5, 0.8, 1}, {0.0, -0.3, -0.5, -0.8, -1}}, "negative-flipped", 1, false);
+            MatrixVisualizer.SaveMatrixImage(new[,] {{0.0, 0.3, 0.5, 0.8, 1}, {0.0, -0.3, -0.5, -0.8, -1}}, "negative-threshold", 0.5);
+            MatrixVisualizer.SaveMatrixImage(new[,] {{0.0, 0.3, 0.5, 0.8, 1}, {0.0, -0.3, -0.5, -0.8, -1}}, "negative-flipped-threshold", 0.5, false);
         }
     }
 }

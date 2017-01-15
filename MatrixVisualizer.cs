@@ -40,7 +40,7 @@ namespace MatrixVisualizer
             {
                 for (var j = 0; j < n; j++)
                 {
-                    var value = matrix[i, j] > threshold ? threshold : matrix[i, j];
+                    var value = matrix[i, j] > threshold ? threshold : matrix[i, j] < -threshold ? -threshold : matrix[i, j];
                     var brush = value >= 0 ? brushes[(int) (value/unit)] : minusBrushes[(int) (-value/unit)];
                     graphics.FillRectangle(brush, j*cellSize, i*cellSize, cellSize, cellSize);
                 }
