@@ -12,23 +12,11 @@ public static void SaveMatrixImage(double[,] matrix, string name, double thresho
 - threshold: Dynamic range for the matrix values
 - bgWhite: As default, zero will be drawn white and max value will be black. If set to false, the color will be flipped.
 
-<table>
-    <th>matrix</th><th>image</th>
-    <tr>
-        <td>{{0.0, 0.3, 0.5, 0.8, 1}, {0, 0, 0, 0, 0}}</td>
-        <td>![positive](image/positive.png)</td>
-    </tr>
-    <tr>
-        <td>{{0.0, 0.3, 0.5, 0.8, 1}, {0, 0, 0, 0, 0}}</td>
-        <td>![positive-flipped](image/positive-flipped.png)</td>
-    </tr>
-    <tr>
-        <td>{{0.0, 0.3, 0.5, 0.8, 1}, {0.0, -0.3, -0.5, -0.8, -1}}</td>
-        <td>![negative](image/negative.png)</td>
-    </tr>
-    <tr>
-        <td>{{0.0, 0.3, 0.5, 0.8, 1}, {0.0, -0.3, -0.5, -0.8, -1}}</td>
-        <td>![negative-flipped](image/negative-flipped.png)</td>
-    </tr>
-</table>
+
+| matrix | image |
+|---|---|
+| {{0.0, 0.3, 0.5, 0.8, 1}, {0, 0, 0, 0, 0}} | ![positive](image/positive.png=200x) |
+| {{0.0, 0.3, 0.5, 0.8, 1}, {0, 0, 0, 0, 0}} | ![positive-flipped](image/positive-flipped.png=200x) |
+| {{0.0, 0.3, 0.5, 0.8, 1}, {0.0, -0.3, -0.5, -0.8, -1}} | ![negative](image/negative.png=200x) |
+| {{0.0, 0.3, 0.5, 0.8, 1}, {0.0, -0.3, -0.5, -0.8, -1}} | ![negative-flipped](image/negative-flipped.png=200x) |
 
