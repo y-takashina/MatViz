@@ -14,6 +14,7 @@ namespace MatViz
         {
             var m = matrix.GetLength(0);
             var n = matrix.GetLength(1);
+            if (m == 0 | n == 0) throw new NullReferenceException("Invalid matrix size: #raws or #cols is zero.");
             var cellSize = m < n ? 1280/n : 1280/m;
             var bmp = new Bitmap(n*cellSize, m*cellSize);
             var graphics = Graphics.FromImage(bmp);
