@@ -49,7 +49,7 @@ namespace MatViz
             return bmp;
         }
 
-        public static void SaveMatrixImage(this double[,] matrix, string name, double threshold = double.MaxValue, bool bgWhite = true)
+        public static void SaveMatrixImage(double[,] matrix, string name, double threshold = double.MaxValue, bool bgWhite = true)
         {
             var bmp = CreateMatrixImage(matrix, threshold, bgWhite);
             bmp.Save(name + ".png", ImageFormat.Png);
