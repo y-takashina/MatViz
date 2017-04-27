@@ -1,6 +1,6 @@
 # MatViz
 
-Simple C# API for matrix(2d array) visualization.
+Simple C# matrix (2d array) visualization.
 
 ```csharp
 public static void SaveMatrixImage(double[,] matrix, string name, double threshold = double.MaxValue, bool bgWhite = true)
